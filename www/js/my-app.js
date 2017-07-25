@@ -1,9 +1,10 @@
-/*var dominio ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/app/";
+/*
+var dominio ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/app/";
 var urlSistema ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/";
 var descargaDocumentos="/storage/emulated/0/ControlDeFlotillas";
 var rutaDocumentos="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/cargas/documentos/";
-var palaSecr="ControlFlotillasFinvivir";*/
-
+var palaSecr="ControlFlotillasFinvivir";
+*/
 
 var dominio ="http://201.163.100.84:8080/flotillasfinvivir/app/ingresar/";
 var urlSistema ="http://201.163.100.84:8080/flotillasfinvivir/";
@@ -1163,9 +1164,9 @@ function dameTodaLaConfiguracion(gestor_id){
                 var z=0;
                 
                 if(ciclos==0){
-                    //window.location="inicio.html";
-                     //dameTodosLosAutosDelGestor(gestor_id);
-                }
+                    dameTodosLosAutosDelGestor(gestor_id);
+                    window.location="inicio.html";
+                }//if
                 
                 $.each(re, function(i, item){
                     almacenamiento.guardarConfiguracion(item.id,item.verde_llantas,item.amarillo_llantas);
