@@ -6,7 +6,7 @@ var rutaDocumentos="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/carga
 var palaSecr="ControlFlotillasFinvivir";
 */
 
-var dominio ="http://201.163.100.84:8080/flotillasfinvivir/app/ingresar/";
+var dominio ="http://201.163.100.84:8080/flotillasfinvivir/app/";
 var urlSistema ="http://201.163.100.84:8080/flotillasfinvivir/";
 var descargaDocumentos="/storage/emulated/0/ControlDeFlotillas";
 var rutaDocumentos="http://201.163.100.84:8080/flotillasfinvivir/cargas/documentos/";
@@ -573,9 +573,8 @@ function dameTodosLosAutosDelGestor(gestor_id){
 		},
         processData:true,
 		success:	function(re){
-            console.log("Automoviles del gestor: ");
+            console.log("Automoviles del gestor("+gestor_id+"): ");
             
-           
             if(re.length>0){
                 //recorremos los automoviles
                 var ciclos = re.length;

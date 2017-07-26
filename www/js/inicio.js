@@ -45,7 +45,7 @@ inicio.dameAutosDelGestor=function(gestor_id,numero_economico){
 		},
         processData:true,
 		success:	function(re){
-            console.log("Automoviles del gestor: ");
+            console.log("Automoviles del gestor(("+dominio+"dame-automoviles"+"|"+clav+"|"+sha1(clav+palaSecr)+"|"+numero_economico+"|"+gestor_id+")): ");
             console.log(re);
             $("#gridAutomoviles").html('');
             if(re.length>0){
