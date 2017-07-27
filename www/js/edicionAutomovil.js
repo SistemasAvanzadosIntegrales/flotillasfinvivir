@@ -55,7 +55,7 @@ edicionAutomovil.cargarFormulario=function(){
     $("#gps_id").val(automovilSeleccionado.id_gps);
     $("#ruta").val(automovilSeleccionado.ruta);
     $("#region").val(automovilSeleccionado.region);
-    $("#conductor").val(automovilSeleccionado.conductor);
+    $("#conductor").val(typeof automovilSeleccionado.conductor=='string'?automovilSeleccionado.conductor:'');
     $("#status").val(automovilSeleccionado.status);
     $("#kilometraje").val(automovilSeleccionado.kilometraje);
     $("#select_notificacion_servicio").val(automovilSeleccionado.notificacion_servicio);
