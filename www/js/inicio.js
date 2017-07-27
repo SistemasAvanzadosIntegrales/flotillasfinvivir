@@ -45,7 +45,7 @@ inicio.dameAutosDelGestor=function(gestor_id,numero_economico){
 		},
         processData:true,
 		success:	function(re){
-            console.log("Automoviles del gestor(("+dominio+"dame-automoviles"+"|"+clav+"|"+sha1(clav+palaSecr)+"|"+numero_economico+"|"+gestor_id+")): ");
+            console.log("Automoviles del gestor: ");
             console.log(re);
             $("#gridAutomoviles").html('');
             if(re.length>0){
@@ -136,7 +136,7 @@ inicio.insertaAutomovil=function(id,numero_economico,ruta,placas,conductor,fecha
                                     '<div class="col-xs-6">'+
                                         '<div class="col-xs-12 bold text-22">'+(ruta==undefined?"Sin ruta":ruta)+'</div>'+
                                         '<div class="col-xs-12 text-center text-16">'+placas+'</div>'+
-                                        '<div class="col-xs-12 text-center italic color-gris">'+(typeof conductor=='string'?conductor:'')+'</div>'+
+                                        '<div class="col-xs-12 text-center italic color-gris">'+conductor+'</div>'+
                                         '<div class="col-xs-12 text-center color gris bold">'+fecha_actualizacion[0]+'</div>'+
                                    ' </div>'+
                                '</td>'+

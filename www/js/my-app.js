@@ -573,8 +573,9 @@ function dameTodosLosAutosDelGestor(gestor_id){
 		},
         processData:true,
 		success:	function(re){
-            console.log("Automoviles del gestor("+gestor_id+"): ");
+            console.log("Automoviles del gestor: ");
             
+           
             if(re.length>0){
                 //recorremos los automoviles
                 var ciclos = re.length;
@@ -1121,7 +1122,7 @@ function dameTodosLosCambiosRegistrados(idAutomovil){
                 var z=0;
                 
                 if(ciclos==0){
-                    //window.location="inicio.html";
+                    window.location="inicio.html";
                     //dameTodaLaConfiguracion();
                     //dameTodosLosSistemasDisponibles();
                     //dameTodosLosDocumentosDisponibles(idAutomovil);
@@ -1131,7 +1132,7 @@ function dameTodosLosCambiosRegistrados(idAutomovil){
                     almacenamiento.guardarCambioLlanta(item.idAutomovil,item.idCambio,item.fecha_cambio,item.numero_llantas,0);
                     
                     if(z == ciclos-1){
-                         //window.location="inicio.html";
+                         window.location="inicio.html";
                         //dameTodaLaConfiguracion();
                         //dameTodosLosSistemasDisponibles();
                         //dameTodosLosDocumentosDisponibles(idAutomovil);
@@ -1163,15 +1164,16 @@ function dameTodaLaConfiguracion(gestor_id){
                 var z=0;
                 
                 if(ciclos==0){
-                    dameTodosLosAutosDelGestor(gestor_id);
-                    window.location="inicio.html";
-                }//if
+                    //window.location="inicio.html";
+                     //dameTodosLosAutosDelGestor(gestor_id);
+                }
                 
                 $.each(re, function(i, item){
                     almacenamiento.guardarConfiguracion(item.id,item.verde_llantas,item.amarillo_llantas);
                     dameTodosLosAutosDelGestor(gestor_id);
                     if(z == ciclos-1){
-                        window.location="inicio.html";
+                       // window.location="inicio.html";
+                       
                     }
                     z++;
                 });
