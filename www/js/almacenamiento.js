@@ -489,7 +489,6 @@ almacenamiento.guardarServicio=function(idAutomovil,id,servicio_id,servicio,tall
         servicio=null; 
     }
     
-    
     //comprobamos que los servicios no este ya almacenado, si no esta lo agrega, y si ya esta no hacemos nada
     $.each(servicios, function(i, item) {
         if(item.id!=0){
@@ -499,6 +498,7 @@ almacenamiento.guardarServicio=function(idAutomovil,id,servicio_id,servicio,tall
         }
         
     });
+    //alert("Comprobamos servicios... Noexiste:"+existe+","+cargaInicial);
     if(existe==true){
         console.log("se agrego un servicios al almacenamiento interno: "+id);
        //agregamos la medicion

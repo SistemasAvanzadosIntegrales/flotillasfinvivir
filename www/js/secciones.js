@@ -97,7 +97,7 @@ servicios.cargarServicios=function(){
                                 sincronizableServicio = 0;
                             }
                             
-                            almacenamiento.guardarServicio(item.idAutomovil,item.id,item.servicio_id,item.servicio,item.taller_id,item.taller,item.factura,item.monto,item.kilometraje,item.status,item.fecha,item.fecha_prometida,item.fecha_entrega,item.tipo_servicio_id,item.tipo_servicio,item.status_servicio,item.sistema_id,item.sistema,sincronizableServicio,sincronizableFactura);
+                            almacenamiento.guardarServicio(item.idAutomovil,item.id,item.servicio_id,item.servicio,item.taller_id,item.taller,item.factura,item.monto,item.kilometraje,item.status,item.fecha,item.fecha_prometida,item.fecha_entrega,item.tipo_servicio_id,item.tipo_servicio,item.status_servicio,item.sistema_id,item.sistema,sincronizableServicio,sincronizableFactura,1);
                             if(contador==ciclo-1){
                                 servicios.insertarServicio();
                             }

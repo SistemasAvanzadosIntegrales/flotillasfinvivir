@@ -1431,7 +1431,8 @@ function pasarAlProximoServicio(no_cambiar_notificacion){
     }
    
     $("#select_notificacion_servicio").attr("notificacionActual",3);
-    _mensaje("Notificación de Servicio","La notificación para el próximo servicio se actualizó correctamente","Entendido");
+    alert("Notificación de Servicio\r\nLa notificación para el próximo servicio se actualizó correctamente");//Bustos dice el _mensaje no detiene el flujo del programa por lo tanto nunca se leera, porque se redirecciona de inmediato.
+    //_mensaje("Notificación de Servicio","La notificación para el próximo servicio se actualizó correctamente","Entendido");
 }
 
 function setearNotificacionOriginal(){

@@ -144,8 +144,8 @@ inicio.insertaAutomovil=function(id,numero_economico,ruta,placas,conductor,fecha
     $("#gridAutomoviles").append(carro);
 }
 inicio.dameAutomovil=function(idAutomovil,flotilla){
-    
-    /*var clav=clave();
+    //alert("Dame automovil.....");
+    var clav=clave();
     $.ajax({
 		url:      dominio+"dame-automovil",
 		type:     'POST',
@@ -157,6 +157,7 @@ inicio.dameAutomovil=function(idAutomovil,flotilla){
 		},
         processData:true,
 		success:	function(re){
+            //alert("Bien al obtener auto");
             console.log("obteniendo automovil: ");
             console.log(re);
             
@@ -165,7 +166,7 @@ inicio.dameAutomovil=function(idAutomovil,flotilla){
                             
                             //se obtuvo el automovil de manera correcta
                             //guardamos la informacion en local storage y redireccionamos a la pagina de los datos generales.
-                            almacenamiento.guardarAutomovil(re[0].id,re[0].conductor,re[0].placas,re[0].numero_serie,re[0].numero_economico,re[0].id_gps,re[0].kilometraje,re[0].modelo_id,re[0].modelo,re[0].marca_id,re[0].marca,re[0].ruta_id,re[0].nombre,re[0].region_id,re[0].region,re[0].fecha_actualizacion,re[0].status,re[0].semaforo,sincronizable,notificacion_servicio,proximo_servicio,frecuencia_servicio);
+                            //almacenamiento.guardarAutomovil(re[0].id,re[0].conductor,re[0].placas,re[0].numero_serie,re[0].numero_economico,re[0].id_gps,re[0].kilometraje,re[0].modelo_id,re[0].modelo,re[0].marca_id,re[0].marca,re[0].ruta_id,re[0].nombre,re[0].region_id,re[0].region,re[0].fecha_actualizacion,re[0].status,re[0].semaforo,sincronizable,notificacion_servicio,proximo_servicio,frecuencia_servicio); Bustos dice lo comente porque las variables se sincronizable no existen...
                             inicio.obtenerCaracteristicasAutomovil(re[0].id,"edicionAutomovil");
                             almacenamiento.seleccionFlotilla(flotilla);
                             almacenamiento.seleccionaAutomovil(re[0].id);
@@ -178,22 +179,24 @@ inicio.dameAutomovil=function(idAutomovil,flotilla){
                     console.log(re);
                     _mensaje("Atención","No se encontró el Automóvil seleccionado","Entendido");
                  }
-                //irA(\'edicionAutomovil\','+numero_economico+')
+                //irA('edicionAutomovil'); Bustos dice la redireccion a edicionAuto no debe de ser aqui sino hasta se ontengan las caracteristicas del auto, porque la obtencion de las caracteristicas es una llamada a Ajax.
 		},
 		error: function(re){
+            //alert("Error al obtener auto");
            // console.log(re);
             //_mensaje("Atención","No hay internet, no se pudo obtener la información.","Entendido");
             almacenamiento.seleccionFlotilla(flotilla);
             almacenamiento.seleccionaAutomovil(idAutomovil);
             irA('edicionAutomovil');
 		}
-	});*/
+	});
     almacenamiento.seleccionFlotilla(flotilla);
     almacenamiento.seleccionaAutomovil(idAutomovil);
-    irA('edicionAutomovil');
-    
+    //irA('edicionAutomovil'); Bustos dice la redireccion no debe de ser aqaui sino despues de la llamada a ajax de las caracteristicas.
 }
 inicio.obtenerCaracteristicasAutomovil=function(idAutomovil,redireccion){
+    //alert("Obtener Caracteristicas automovil");
+    console.log("Entro obtener caracteriaticas");
     var clav=clave();
     $.ajax({
 		url:      dominio+"dame-caracteristicas-automovil",
@@ -206,6 +209,7 @@ inicio.obtenerCaracteristicasAutomovil=function(idAutomovil,redireccion){
 		},
         processData:true,
 		success:	function(re){
+            //alert("Bien obtener");
             console.log("obteniendo caracteristicas del automovil: "+idAutomovil);
             console.log(re);
             
@@ -239,13 +243,15 @@ inicio.obtenerCaracteristicasAutomovil=function(idAutomovil,redireccion){
                             }
                             z++;
                         });
-                        
+                     irA('edicionAutomovil');
                  }else{
                     console.log(re);
                     _mensaje("Atención","No se encontrarón caracteristicas para el Automóvil seleccionado","Entendido");
+                     irA('edicionAutomovil');
                  }
 		},
 		error: function(re){
+            //alert("Mal obtener");
             console.log(re);
             _mensaje("Atención","No hay internet, no se pudo obtener las caracteristicas del automovil.","Entendido");
 		}
