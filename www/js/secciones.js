@@ -146,8 +146,9 @@ servicios.insertarServicio=function(){
             clase = 'bsyellow';
             letra = 'P';
         }
-        serv+='<tr class="col-xs-12 sinPadding" onclick="'+(item.id>=0?"irA('edicion-servicios','','"+item.id+"','"+item.idAutomovil+"',"+item.servicio_id+","+item.sistema_id+")":"irA('edicion-servicios','','"+item.id+"','"+item.idAutomovil+"',"+item.servicio_id+","+item.sistema_id+")")+'">'+
-                    '<td class="col-xs-12">'+
+        //col-xs-12
+        serv+='<tr style="width:100%;" class="sinPadding" onclick="'+(item.id>=0?"irA('edicion-servicios','','"+item.id+"','"+item.idAutomovil+"',"+item.servicio_id+","+item.sistema_id+")":"irA('edicion-servicios','','"+item.id+"','"+item.idAutomovil+"',"+item.servicio_id+","+item.sistema_id+")")+'">'+
+                    '<td class="" style="width:100%;">'+
                         '<div class="col-xs-2 '+clase+' text-center blanco text-30 lineHeight90px sinPadding">'+letra+'</div>'+
                         '<div class="col-xs-9">'+
                             '<div class="col-xs-12 bold text-16 text-center">'+(item.servicio!=null?item.servicio:item.sistema)+'</div>'+
