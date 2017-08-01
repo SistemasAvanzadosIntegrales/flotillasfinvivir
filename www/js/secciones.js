@@ -15,6 +15,7 @@ var usuario='';
             forceParse: 0
             
         });*/
+        
         var format_date = myApp.calendar({
                 input: '.format-date',
                 dateFormat: 'yyyy-mm-dd',
@@ -24,6 +25,7 @@ var usuario='';
                 dayNames:['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
                 dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
             });
+        
         //obtenemos el usuario firmado
         usuario = almacenamiento.dameUsuario();
         
