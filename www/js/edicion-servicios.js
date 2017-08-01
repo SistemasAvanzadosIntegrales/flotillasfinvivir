@@ -13,7 +13,7 @@ var campoFechaEntrega;
             input: '.campoFecha',
             dateFormat: 'yyyy-mm-dd',
             closeOnSelect:true,
-            maxDate:fechaMañana(),
+            maxDate:fechaMananaBien(),
             monthNames:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto' , 'Septiembre' , 'Octubre', 'Noviembre', 'Diciembre'],
             monthNamesShort:['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],	
             dayNames:['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
@@ -40,7 +40,7 @@ var campoFechaEntrega;
                 input: '.campoFechaEntrega',
                 dateFormat: 'yyyy-mm-dd',
                 minDate:$("#fecha").val(),
-                maxDate:fechaMañana(),
+                maxDate:fechaMananaBien(),
                 closeOnSelect:true,
                 monthNames:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto' , 'Septiembre' , 'Octubre', 'Noviembre', 'Diciembre'],
                 monthNamesShort:['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],	
@@ -84,7 +84,7 @@ var campoFechaEntrega;
                 input: '.campoFechaEntrega',
                 dateFormat: 'yyyy-mm-dd',
                 minDate:$("#fecha").val(),
-                 maxDate:fechaMañana(),
+                 maxDate:fechaMananaBien(),
                 monthNames:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto' , 'Septiembre' , 'Octubre', 'Noviembre', 'Diciembre'],
                 monthNamesShort:['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],	
                 dayNames:['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
@@ -122,6 +122,8 @@ var campoFechaEntrega;
             $("#id").val(servicioSeleccionado.id);
         }
         console.log("Actualizar registr: "+editar);
+        
+        localStorage.setItem('pestanaActiva','4');
     });
 
 servicios.cargarServicios=function(){

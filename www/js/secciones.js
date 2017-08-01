@@ -44,13 +44,14 @@ var usuario='';
         $("#incidente_agregar").attr("onclick","irA('edicion-incidentes','','','"+automovilSeleccionado.id+"','0','0')");
         $("#detalle_agregar").attr("onclick","irA('edicion-detalle','','','"+automovilSeleccionado.id+"','0','0')");
         
-        
-        
-        
-        
-        
-        
-        
+        //alert("uno");
+        $(".tab-link").removeClass("active");
+        $(".tab").removeClass("active");
+        var temp=localStorage.getItem("pestanaActiva");
+        temp=temp==null?"1":temp;
+        $("#link"+temp).addClass("active");
+        $("#tab"+temp).addClass("active");
+        //alert("dos");
     });
 
 servicios.cargarServicios=function(){

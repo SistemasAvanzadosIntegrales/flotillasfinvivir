@@ -53,6 +53,7 @@ function onDeviceReady() {
           });
 
    });*/
+   //localStorage.setItem('pestanaActiva','3');
 }
 
  documentos.obtenerDocumentos=function(idAutomovil){

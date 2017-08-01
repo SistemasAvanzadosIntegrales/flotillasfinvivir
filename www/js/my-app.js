@@ -519,6 +519,16 @@ function fechaHoy(){
     
     return anio+"-"+mes+"-"+dia;
 }
+
+function fechaMananaBien(){
+    var hoy=new Date();
+	hoy.setDate(hoy.getDate()+1);
+    var anio=hoy.getFullYear();
+    var mes =((hoy.getMonth()+1) <10)? '0' +(hoy.getMonth()+1) :  (hoy.getMonth()+1);
+    var dia =((hoy.getDate()) <10) ?'0'+(hoy.getDate()) : hoy.getDate();
+    return anio+"-"+mes+"-"+dia;
+}//function
+
 function fechaMañana(){
     var hoy = new Date();
     var anio = hoy.getFullYear();

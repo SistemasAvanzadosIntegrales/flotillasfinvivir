@@ -49,8 +49,9 @@ detalless.cargaGrid=function(){
             }else{
                 estatus = "Sin Reparar";
             }
-
-            deta='<tr class="col-xs-12 sinPadding" onclick="irA(\'edicion-detalle\',0,'+item.id+','+item.idAutomovil+',0,0)">'+
+            
+            // col-xs-12 
+            deta='<tr class="sinPadding" style="width:100%;" onclick="irA(\'edicion-detalle\',0,'+item.id+','+item.idAutomovil+',0,0)">'+
                         '<td class="col-xs-3 text-12">'+fecha_detalle+'</td>'+
                         '<td class="col-xs-5 text-12">'+item.componente+" <br/> "+item.detalle+'</td>'+
                         '<td class="col-xs-2 text-12">'+fecha_reparacion+'</td>'+

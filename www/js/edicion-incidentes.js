@@ -12,7 +12,7 @@ var campoFechaEntrega;
             input: '.campoFecha',
             dateFormat: 'yyyy-mm-dd',
             closeOnSelect:true,
-            maxDate:fechaMañana(),
+            maxDate:fechaMananaBien(),
             monthNames:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto' , 'Septiembre' , 'Octubre', 'Noviembre', 'Diciembre'],
             monthNamesShort:['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],	
             dayNames:['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
@@ -39,7 +39,7 @@ var campoFechaEntrega;
                 input: '.campoFechaEntrega',
                 dateFormat: 'yyyy-mm-dd',
                 minDate:$("#fecha").val(),
-                 maxDate:fechaMañana(),
+                 maxDate:fechaMananaBien(),
                 closeOnSelect:true,
                 monthNames:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto' , 'Septiembre' , 'Octubre', 'Noviembre', 'Diciembre'],
                 monthNamesShort:['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],	
@@ -49,6 +49,7 @@ var campoFechaEntrega;
             
             $(".campoFechaPrometida").val('');
             $(".campoFechaEntrega").val('');
+            
         });
         
         //obtenemos el usuario firmado
@@ -108,6 +109,7 @@ var campoFechaEntrega;
             $("#id").val(incidenteSeleccionado.id);
         }
         
+        localStorage.setItem('pestanaActiva','5');
     });
 
 incidentes.cargarIncidentes=function(){
