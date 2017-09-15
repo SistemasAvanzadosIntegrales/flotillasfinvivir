@@ -110,6 +110,15 @@ var campoFechaEntrega;
         }
         
         localStorage.setItem('pestanaActiva','5');
+        
+        
+        var usua=almacenamiento.dameUsuario();
+        $(".btnDesa").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
+        if(usua["tipo"]=='2'||usua["tipo"]=='3')
+            for(var i=0; i<=$(".txtDesa").length-1; i++){
+                $(".txtDesa")[i].disabled=true;
+            }//for
+        
     });
 
 incidentes.cargarIncidentes=function(){
@@ -229,15 +238,18 @@ incidentes.cargaLocalIncidente=function(){
                             $("#numero_siniestro").attr("readonly","readonly");
                         }
 
+                        var usua=almacenamiento.dameUsuario();
                         if(incidenteLocal.sincronizable==0 && incidenteLocal.sincronizableFactura==1){
-                            $(".botonGuardar").show();
+                            if(!(usua["tipo"]=='2'||usua["tipo"]=='3'))
+                                $(".botonGuardar").show();
                             sincronizarFactura=true;
                             console.log("SINCRONIZACION DE FACTURA");
                         }else if(incidenteLocal.sincronizable==0 && incidenteLocal.sincronizableFactura==0){
                             $(".botonGuardar").hide();
                             console.log("SINCRONIZADO CON EL SERVIDOR");
                         }else{
-                            $(".botonGuardar").show();
+                            if(!(usua["tipo"]=='2'||usua["tipo"]=='3'))
+                                $(".botonGuardar").show();
                             console.log("EDICION NORMAL");
                         }
 }

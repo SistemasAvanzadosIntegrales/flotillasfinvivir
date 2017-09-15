@@ -1,17 +1,17 @@
-/*
+
 var dominio ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/app/";
 var urlSistema ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/";
 var descargaDocumentos="/storage/emulated/0/ControlDeFlotillas";
 var rutaDocumentos="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/cargas/documentos/";
 var palaSecr="ControlFlotillasFinvivir";
-*/
 
+/*
 var dominio ="http://201.163.100.84:8080/flotillasfinvivir/app/";
 var urlSistema ="http://201.163.100.84:8080/flotillasfinvivir/";
 var descargaDocumentos="/storage/emulated/0/ControlDeFlotillas";
 var rutaDocumentos="http://201.163.100.84:8080/flotillasfinvivir/cargas/documentos/";
 var palaSecr="ControlFlotillasFinvivir";
-
+*/
 
  
 
@@ -583,8 +583,8 @@ function dameTodosLosAutosDelGestor(gestor_id){
 		},
         processData:true,
 		success:	function(re){
-            console.log("Automoviles del gestor: ");
-            
+            console.log("Automoviles del gestorr: ");
+            console.log(JSON.stringify(re));
            
             if(re.length>0){
                 //recorremos los automoviles
@@ -632,7 +632,9 @@ function dameTodosLosAutosDelGestor(gestor_id){
                     }
                     z++;
                 });
-            }
+            }else{
+                _mensaje("Atención","No tienes automoviles ligados","Entendido");
+            }//if
 		},
 		error: function(re){
             console.log(re);
@@ -1469,7 +1471,7 @@ function verificarProximoServicio(idAutomovil){
     almacenamiento.actualizarNotificacionServicio(idAutomovil,'',proximo_servicio,1);
 }
 function esNecesarioPasarAlProximoServicio(idAutomovil){
-    
+    //alert("Es necesario pasar al proximo");
     automovil = almacenamiento.dameAutomovil(idAutomovil);
     var km_actual = parseFloat(automovil.kilometraje);
     var rango_frecuencia = parseFloat(automovil.frecuencia_servicio/2);
@@ -1477,6 +1479,7 @@ function esNecesarioPasarAlProximoServicio(idAutomovil){
     
     
     if(km_actual > (proximo_servicio - rango_frecuencia)){
+        //alert("pasará al proximo servicio");
         pasarAlProximoServicio(1);
     }
 }

@@ -118,15 +118,15 @@
                                         <input type="text" class="col-xs-12 form-control " id="conductor" value="" placeholder="Conductor Habitual" maxlength="100" readonly="readonly">
                                     </div>
                                     <div class="col-xs-12 margin2pxAuto">
-                                        <select id="status" class="col-xs-6 form-control" onchange="edicionAutomovil.actualizarAutomovil()">
+                                        <select id="status" class="col-xs-6 form-control txtDesa" onchange="edicionAutomovil.actualizarAutomovil()">
                                             <option value="1" selected="selected">Buen estado</option>
                                             <option value="0">Inactivo</option>
                                             <option value="2">En reparación</option>
                                         </select>
-                                        <input type="number" class="col-xs-6 form-control " id="kilometraje" value="" placeholder="Kilometraje"  onblur="edicionAutomovil.actualizarAutomovil()" maxlength="11">
+                                        <input type="number" class="col-xs-6 form-control txtDesa" id="kilometraje" value="" placeholder="Kilometraje"  onblur="edicionAutomovil.actualizarAutomovil()" maxlength="11">
                                     </div>
                                     <div class="col-xs-12 margin2pxAuto">
-                                        <select id="select_notificacion_servicio" onchange="edicionAutomovil.notificacion(this)" class="col-xs-6 form-control ">
+                                        <select id="select_notificacion_servicio" onchange="edicionAutomovil.notificacion(this)" class="col-xs-6 form-control txtDesa">
                                             <option value="1">Para Servicio</option>
                                             <option value="2">En Servicio</option>
                                             <option value="3">En Circulación</option>
@@ -146,9 +146,9 @@
                                         </div>
 
                                         <div class="col-xs-2 paddingLeftRight10px">
-                                            <a class="btn btn-primary col-xs-12 sinPadding"  onclick="edicionAutomovil.agregarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-right"></i> </a>
+                                            <a class="btn btn-primary col-xs-12 sinPadding btnDesa"  onclick="edicionAutomovil.agregarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-right"></i> </a>
                                             <div class="span12">&nbsp;</div>
-                                            <a class="btn btn-primary col-xs-12 sinPadding"  onclick="edicionAutomovil.quitarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-left"></i> </a>
+                                            <a class="btn btn-primary col-xs-12 sinPadding btnDesa"  onclick="edicionAutomovil.quitarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-left"></i> </a>
                                         </div>
 
 
@@ -176,7 +176,7 @@
                                       </div>
                                       <div class="col-xs-12 sinPadding marginTop15px">
                                           <div class="col-xs-3 sinPadding marginTop15px ">
-                                                <input type="number" class="form-control padding5px" placeholder="Prof. mm" id="del_izq" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
+                                                <input type="number" class="form-control padding5px txtDesa" placeholder="Prof. mm" id="del_izq" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
                                           </div>
                                           <div class="col-xs-1 col-xs-offset-1 sinPadding">
                                                 <img class="col-xs-2 w100 hauto sinPadding" src="imagenes/llanta.png">
@@ -188,17 +188,17 @@
                                                 <img class="col-xs-2 w100 hauto sinPadding" src="imagenes/llanta.png">
                                           </div>
                                           <div class="col-xs-3 col-xs-offset-1 sinPadding marginTop15px">
-                                                <input type="number" class="form-control padding5px" placeholder="Prof. mm" id="del_der" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
+                                                <input type="number" class="form-control padding5px txtDesa" placeholder="Prof. mm" id="del_der" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
                                           </div>
                                       </div>
                                       <div class="col-xs-12 padding15px">
-                                            <button class="btn btn-lg btn-success center-block btn_registrar" type="button" onclick="medicionLlantas.registrarMedicion()">
+                                            <button class="btn btn-lg btn-success center-block btn_registrar btnDesa" type="button" onclick="medicionLlantas.registrarMedicion()">
                                                 <i class="fa fa-pencil fa-sm" aria-hidden="true"></i>&nbsp;Registrar
                                             </button>
                                        </div>
                                       <div class="col-xs-12 sinPadding marginTop15px">
                                           <div class="col-xs-3 sinPadding marginTop15px">
-                                                <input type="number" class="form-control padding5px" placeholder="Prof. mm" id="tras_izq" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
+                                                <input type="number" class="form-control padding5px txtDesa" placeholder="Prof. mm" id="tras_izq" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
                                           </div>
                                           <div class="col-xs-1 col-xs-offset-1 sinPadding">
                                                 <img class="col-xs-2 w100 hauto sinPadding" src="imagenes/llanta.png">
@@ -210,7 +210,7 @@
                                                 <img class="col-xs-2 w100 hauto sinPadding" src="imagenes/llanta.png">
                                           </div>
                                           <div class="col-xs-3 sinPadding col-xs-offset-1 marginTop15px">
-                                                <input type="number" class="form-control padding5px" placeholder="Prof. mm" id="tras_der" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
+                                                <input type="number" class="form-control padding5px txtDesa" placeholder="Prof. mm" id="tras_der" name="monto" maxlength="11" onkeypress="permiteNumerosConDecimal();">
                                           </div>
                                       </div>
                                       <div class="col-xs-12 sinPadding">
@@ -251,11 +251,11 @@
                                                 </div>
                                           </div>
                                           <div class="col-xs-6 sinPadding marginTop15px">
-                                                <input type="number" class="form-control padding5px" placeholder="# de llantas" id="llantas_cambiadas" name="llantas_cambiadas" onkeypress="return permiteNumerosSinDecimal(event,this)">
+                                                <input type="number" class="form-control padding5px txtDesa" placeholder="# de llantas" id="llantas_cambiadas" name="llantas_cambiadas" onkeypress="return permiteNumerosSinDecimal(event,this)">
                                           </div>
                                       </div>
                                       <div class="col-xs-12 padding15px">
-                                            <button class="btn btn-lg btn-success center-block btn_registrar_cambio" type="button" onclick="medicionLlantas.registrarCambio()">
+                                            <button class="btn btn-lg btn-success center-block btn_registrar_cambio btnDesa" type="button" onclick="medicionLlantas.registrarCambio()">
                                                 <i class="fa fa-pencil fa-sm" aria-hidden="true"></i>&nbsp;Registrar Cambio
                                             </button>
                                        </div>
@@ -291,14 +291,14 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-6 sinPaddingRight">
-                                            <select class="form-control" id="tipo" name="tipo_documento_id">
+                                            <select class="form-control txtDesa" id="tipo" name="tipo_documento_id">
                                                       
                                             </select>
                                         </div>
                                     </div><br>                            
                                     <div class="col-xs-12 marginTopBottom5px">
                                         <div class="col-xs-6 sinPadding">
-                                            <div class="btn btn-primary pull-left botonFile">
+                                            <div class="btn btn-primary pull-left botonFile btnDesa">
                                                 <!--<input type="text" class="form-control" placeholder="Archivo..." id="" readonly>-->
                                                 <span class="">
                                                     <input type="file" class="form-control oculto" placeholder="Archivo..." id="archivo" name="archivo" >
@@ -307,7 +307,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-6 sinPadding">
-                                            <button class="btn btn-success pull-right btnAdjuntar" type="button" onclick="javascript:documentos.adjuntarArchivo()">
+                                            <button class="btn btn-success pull-right btnAdjuntar btnDesa" type="button" onclick="javascript:documentos.adjuntarArchivo()">
                                                 <i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i>
                                             </button>
                                         </div>
@@ -348,7 +348,7 @@
                                     </tbody>
                               </table>
                                   <!-- Floating Action Button -->
-                                  <a href="#" class="floating-button boton-flotante" id="servicio_agregar" onclick="">
+                                  <a href="#" class="floating-button boton-flotante btnDesa" id="servicio_agregar" onclick="">
                                     <i class="fa fa-plus"></i>
                                   </a>
                             </div>
@@ -367,7 +367,7 @@
                               </table>
 
                                   <!-- Floating Action Button -->
-                                  <a href="#" class="floating-button boton-flotante" id="incidente_agregar" onclick="">
+                                  <a href="#" class="floating-button boton-flotante btnDesa" id="incidente_agregar" onclick="">
                                     <i class="fa fa-plus"></i>
                                   </a>
                             </div>
@@ -392,7 +392,7 @@
                               </table>
 
                                   <!-- Floating Action Button -->
-                                  <a href="#" class="floating-button boton-flotante" id="detalle_agregar" onclick="">
+                                  <a href="#" class="floating-button boton-flotante btnDesa" id="detalle_agregar" onclick="">
                                     <i class="fa fa-plus"></i>
                                   </a>
                             </div>

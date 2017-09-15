@@ -124,6 +124,15 @@ var campoFechaEntrega;
         console.log("Actualizar registr: "+editar);
         
         localStorage.setItem('pestanaActiva','4');
+        
+        
+        
+        var usua=almacenamiento.dameUsuario();
+        $(".btnDesa").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
+        if(usua["tipo"]=='2'||usua["tipo"]=='3')
+            for(var i=0; i<=$(".txtDesa").length-1; i++){
+                $(".txtDesa")[i].disabled=true;
+            }//for
     });
 
 servicios.cargarServicios=function(){
@@ -280,15 +289,18 @@ servicios.cargaLocalServicio=function(){
                         $("#fecha_prometida").val(fecha_prometida[0]);
                         $("#fecha_entrega").val(fecha_entrega[0]);
     
+                        var usua=almacenamiento.dameUsuario();
                         if(servicioLocal.sincronizable==0 && servicioLocal.sincronizableFactura==1){
-                            $(".botonGuardar").show();
+                            if(!(usua["tipo"]=='2'||usua["tipo"]=='3'))
+                                $(".botonGuardar").show();
                             sincronizarFactura=true;
                             console.log("SINCRONIZACION DE FACTURA");
                         }else if(servicioLocal.sincronizable==0 && servicioLocal.sincronizableFactura==0){
                             $(".botonGuardar").hide();
                             console.log("SINCRONIZADO CON EL SERVIDOR");
                         }else{
-                            $(".botonGuardar").show();
+                            if(!(usua["tipo"]=='2'||usua["tipo"]=='3'))
+                                $(".botonGuardar").show();
                             console.log("EDICION NORMAL");
                         }
     

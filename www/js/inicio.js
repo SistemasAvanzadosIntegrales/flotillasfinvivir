@@ -9,6 +9,7 @@ var usuario='';
         
         console.log(inicio);
         //obtenemos los automoviles del usuario firmado
+        //alert("dame autos del gestor"+usuario.id);
         inicio.dameAutosDelGestor(usuario.id,'');
         $(".barra_buscadora").attr("onkeyup","inicio.buscador('"+usuario.id+"',this.value)");
 
@@ -45,7 +46,7 @@ inicio.dameAutosDelGestor=function(gestor_id,numero_economico){
 		},
         processData:true,
 		success:	function(re){
-            console.log("Automoviles del gestor: ");
+            console.log("Automoviles del gestor_: ");
             console.log(re);
             $("#gridAutomoviles").html('');
             if(re.length>0){

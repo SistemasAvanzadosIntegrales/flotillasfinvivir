@@ -9,6 +9,13 @@ var campoFechaReparacion;
 
     $(document).ready(function(){
         
+        var usua=almacenamiento.dameUsuario();
+        $(".btnDesa").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
+        if(usua["tipo"]=='2'||usua["tipo"]=='3')
+            for(var i=0; i<=$(".txtDesa").length-1; i++){
+                $(".txtDesa")[i].disabled=true;
+            }//for
+        
         //obtenemos el usuario firmado
         usuario = almacenamiento.dameUsuario();
         
@@ -151,11 +158,6 @@ var campoFechaReparacion;
                     dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
             });
         }
-        
-        
-        
-        
-        
         
         localStorage.setItem('pestanaActiva','6');
     });

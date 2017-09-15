@@ -19,6 +19,7 @@ ingreso.ingresar=function(){
 		},
         processData:true,
 		success:	function(re){
+            console.log(dominio+"ingresar");
             console.log("Al ingresar el servidor responde: ");
             console.log(re[0]);
             

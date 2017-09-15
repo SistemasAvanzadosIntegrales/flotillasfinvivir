@@ -21,7 +21,13 @@ var usuario='';
         $("#seleccionadas").html('');
         edicionAutomovil.cargarCaracteristicas();
         
-        
+        var usua=almacenamiento.dameUsuario();
+        $(".btnDesa").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
+        $("input:checkbox").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
+        if(usua["tipo"]=='2'||usua["tipo"]=='3')
+            for(var i=0; i<=$(".txtDesa").length-1; i++){
+                $(".txtDesa")[i].disabled=true;
+            }//for
     });
 edicionAutomovil.notificacion = function(obj){
     var valor = $(obj).val();

@@ -53,7 +53,7 @@
                       </div>
                   </div>
                   <div class="col-xs-6 text-12 negro sinPadding">
-                      <span class="col-xs-8 sinPadding">Datos Generales</span><span class="numero_flotilla col-xs-4 sinPadding"></span>
+                      <span class="col-xs-8 sinPadding">Datos Generales.</span><span class="numero_flotilla col-xs-4 sinPadding"></span>
                   </div>
                   <div class="col-xs-1 right sinPadding sinMargin">
                       <a href="#" class="link icon-only open-panel" data-panel="right"><i class="fa fa-bars"></i></a>
@@ -79,16 +79,16 @@
                     <input type="text" class="col-xs-12 form-control " id="conductor" value="" placeholder="Conductor Habitual" maxlength="100" readonly="readonly">
                 </div>
                 <div class="col-xs-12 margin2pxAuto">
-                    <select id="status" class="col-xs-6 form-control ">
+                    <select id="status" class="col-xs-6 form-control txtDesa">
                         <option value="1" selected="selected">Buen estado</option>
                         <option value="0">Inactivo</option>
                         <option value="2">En reparación</option>
                     </select>
-                    <input type="number" class="col-xs-6 form-control " id="kilometraje" value="" placeholder="Kilometraje" onkeypress="return permiteNumerosSinDecimal(event, this)" maxlength="11">
+                    <input type="number" class="col-xs-6 form-control txtDesa" id="kilometraje" value="" placeholder="Kilometraje" onkeypress="return permiteNumerosSinDecimal(event, this)" maxlength="11">
                 </div>
                 
                 <div class="col-xs-12 margin2pxAuto">
-                    <select id="select_notificacion_servicio" onchange="edicionAutomovil.notificacion(this)" class="col-xs-6 form-control">
+                    <select id="select_notificacion_servicio" onchange="edicionAutomovil.notificacion(this)" class="col-xs-6 form-control txtDesa">
                         <option value="1">Para Servicio</option>
                         <option value="2">En Servicio</option>
                         <option value="3">En Circulación</option>
@@ -108,9 +108,9 @@
                     </div>
 
                     <div class="col-xs-2 paddingLeftRight10px">
-                        <a class="btn btn-primary col-xs-12 sinPadding"  onclick="edicionAutomovil.agregarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-right"></i> </a>
+                        <a class="btn btn-primary col-xs-12 sinPadding btnDesa"  onclick="edicionAutomovil.agregarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-right"></i> </a>
                         <div class="span12">&nbsp;</div>
-                        <a class="btn btn-primary col-xs-12 sinPadding"  onclick="edicionAutomovil.quitarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-left"></i> </a>
+                        <a class="btn btn-primary col-xs-12 sinPadding btnDesa"  onclick="edicionAutomovil.quitarCaracteristicas();">&nbsp;<i class="fa fa-arrow-circle-left"></i> </a>
                     </div>
                     
                     

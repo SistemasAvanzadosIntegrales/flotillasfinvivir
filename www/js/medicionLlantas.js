@@ -33,6 +33,12 @@ var fechaCambio='';
          //cargamos los cambios de llantas para este automovil
         medicionLlantas.cargarCambios();
         
+        var usua=almacenamiento.dameUsuario();
+        $(".btnDesa").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
+        if(usua["tipo"]=='2'||usua["tipo"]=='3')
+            for(var i=0; i<=$(".txtDesa").length-1; i++){
+                $(".txtDesa")[i].disabled=true;
+            }//for
     });
 
 

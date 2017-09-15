@@ -508,6 +508,7 @@ almacenamiento.guardarServicio=function(idAutomovil,id,servicio_id,servicio,tall
         
         
         //actualizar el estatus de la notificacion del servicio cuando guarde un servicio
+        //alert(tipo_servicio+" , "+cargaInicial);
         if(tipo_servicio=="Preventivo" && cargaInicial!=1){//si el tipo de servicio que se esta guardando es preventivo
             console.log("verificando el servicio preventivo");
             notificacion_servicio = 0;

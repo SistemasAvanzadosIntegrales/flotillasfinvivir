@@ -54,6 +54,9 @@ var usuario='';
         $("#link"+temp).addClass("active");
         $("#tab"+temp).addClass("active");
         //alert("dos");
+            
+        var usua=almacenamiento.dameUsuario();
+        $("input:checkbox").css("display", usua["tipo"]=='2'||usua["tipo"]=='3' ?"none":"");
     });
 
 servicios.cargarServicios=function(){
