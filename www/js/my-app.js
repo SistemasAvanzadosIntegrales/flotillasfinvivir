@@ -1,17 +1,17 @@
-
+/*
 var dominio ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/app/";
 var urlSistema ="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/";
 var descargaDocumentos="/storage/emulated/0/ControlDeFlotillas";
 var rutaDocumentos="http://avansys-admin.dyndns.org:8080/flotillasfinvivir/cargas/documentos/";
 var palaSecr="ControlFlotillasFinvivir";
+*/
 
-/*
 var dominio ="http://201.163.100.84:8080/flotillasfinvivir/app/";
 var urlSistema ="http://201.163.100.84:8080/flotillasfinvivir/";
 var descargaDocumentos="/storage/emulated/0/ControlDeFlotillas";
 var rutaDocumentos="http://201.163.100.84:8080/flotillasfinvivir/cargas/documentos/";
 var palaSecr="ControlFlotillasFinvivir";
-*/
+
 
  
 
