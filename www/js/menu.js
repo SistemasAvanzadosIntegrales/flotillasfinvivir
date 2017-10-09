@@ -1,5 +1,7 @@
 
        /* overlay */
+    var usua=almacenamiento.dameUsuario();
+    
     document.writeln('<div class="panel-overlay"></div>');
     document.writeln('<div class="panel panel-right panel-cover">');
         document.writeln('<div class="page-content contacts-content">');
@@ -14,6 +16,7 @@
                             document.writeln('</div>');
                           document.writeln('</div>');
                         document.writeln('</li>');
+    if(!(usua["tipo"]=='2'||usua["tipo"]=='3')){
                         document.writeln('<li onclick="irA(\'sincronizacion\')">');  
                           document.writeln('<div class="item-content">');
                             document.writeln('<div class="item-inner">');
@@ -21,6 +24,7 @@
                             document.writeln('</div>');
                           document.writeln('</div>');
                         document.writeln('</li>');
+    }//if
                         document.writeln('<li onclick="irA(\'acercaDe\')">');
                           document.writeln('<div class="item-content">');
                             document.writeln('<div class="item-inner">');
